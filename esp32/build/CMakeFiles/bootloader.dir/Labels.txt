@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+C:/SBC/Proyecto/Aula-Inteligente/esp32/build/CMakeFiles/bootloader
+C:/SBC/Proyecto/Aula-Inteligente/esp32/build/CMakeFiles/bootloader.rule
+C:/SBC/Proyecto/Aula-Inteligente/esp32/build/CMakeFiles/bootloader-complete.rule
+C:/SBC/Proyecto/Aula-Inteligente/esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/SBC/Proyecto/Aula-Inteligente/esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/SBC/Proyecto/Aula-Inteligente/esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/SBC/Proyecto/Aula-Inteligente/esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/SBC/Proyecto/Aula-Inteligente/esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/SBC/Proyecto/Aula-Inteligente/esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/SBC/Proyecto/Aula-Inteligente/esp32/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

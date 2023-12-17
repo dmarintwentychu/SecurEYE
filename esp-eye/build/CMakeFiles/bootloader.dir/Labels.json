@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/SBC/Proyecto/Aula-Inteligente/esp-eye/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "C:/SBC/Proyecto/Aula-Inteligente/esp-eye/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "C:/SBC/Proyecto/Aula-Inteligente/esp-eye/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "C:/SBC/Proyecto/Aula-Inteligente/esp-eye/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "C:/SBC/Proyecto/Aula-Inteligente/esp-eye/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "C:/SBC/Proyecto/Aula-Inteligente/esp-eye/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "C:/SBC/Proyecto/Aula-Inteligente/esp-eye/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "C:/SBC/Proyecto/Aula-Inteligente/esp-eye/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "C:/SBC/Proyecto/Aula-Inteligente/esp-eye/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "C:/SBC/Proyecto/Aula-Inteligente/esp-eye/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}

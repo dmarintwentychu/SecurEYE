@@ -1,0 +1,18 @@
+{
+    "idf.adapterTargetName": "esp32",
+    "idf.portWin": "COM3",
+    "idf.flashType": "UART",
+    "files.associations": {
+        "wifi.h": "c",
+        "getwp.h": "c",
+        "getws.h": "c",
+        "ssd1306.h": "c",
+        "font8x8_basic.h": "c",
+        "display.h": "c",
+        "typeinfo": "c",
+        "spiffs.h": "c"
+    },
+    "idf.openOcdConfigs": [
+        "board/esp32-wrover-kit-3.3v.cfg"
+    ]
+}

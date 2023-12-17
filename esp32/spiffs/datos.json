@@ -1,0 +1,11 @@
+{
+    "ssid": [
+        "SBC",
+        "Unared-34"
+    ],
+    "pass": [
+        "SBCwifi$",
+        "Unacontrasen1a"
+    ],
+    "esp32": "rrnhdJt16zoE7IMlNn2g"
+}
