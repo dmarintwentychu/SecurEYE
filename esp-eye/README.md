@@ -1,4 +1,2 @@
-
-
-#_Codigo del esp32_
+_Codigo del esp32_
 
