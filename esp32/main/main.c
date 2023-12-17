@@ -3,6 +3,7 @@
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h" //for delay,mutexs,semphrs rtos operations
 #include "freertos/task.h"
+#include "esp_sleep.h"
 
 #include "driver/gpio.h"
 #include "driver/adc.h"
@@ -17,9 +18,27 @@
 #include "include/co2.h"
 #include "include/mqtt.h"
 
+
 #define VALUE_PORT GPIO_NUM_33
+#define VALUE_PORT2 GPIO_NUM_32
 
 static const char *TAG = "main";
+
+static bool is_button_pressed() {
+    return gpio_get_level(VALUE_PORT2) == 1;
+}
+
+static void enter_light_sleep() {
+    printf("Entering light sleep mode...\n");
+    
+    // Enable GPIO as wake-up source
+    esp_sleep_enable_ext0_wakeup(VALUE_PORT2, 1); 
+
+    // Enter light sleep mode
+    esp_light_sleep_start();
+    printf("Woke up from light sleep mode.\n");
+}
+
 
 void app_main()
 {
@@ -44,7 +63,7 @@ void app_main()
     init_rest_function();
     setup_ws_server();
 
-    //co2_init();
+    co2_init();
 
     init_display();
 
@@ -52,6 +71,9 @@ void app_main()
     adc1_config_channel_atten(ADC1_CHANNEL_5, ADC_ATTEN_DB_0);
     gpio_set_direction(VALUE_PORT, GPIO_MODE_INPUT);
     gpio_set_pull_mode(VALUE_PORT, GPIO_PULLUP_ONLY);
+
+    gpio_set_direction(VALUE_PORT2, GPIO_MODE_INPUT);
+    gpio_set_pull_mode(VALUE_PORT2, GPIO_PULLUP_ONLY);
 
     mqtt_init(tokenesp32);
 
@@ -73,6 +95,13 @@ void app_main()
         mqtt_send(numPersonas, "npeople");
         mqtt_send(ldr, "ldr");
         mqtt_send(temperature, "temperature");
+
+       if (is_button_pressed()) {
+            printf("Button pressed! Entering light sleep...\n");
+            vTaskDelay(1000 / portTICK_PERIOD_MS);
+            enter_light_sleep();
+        }
+
         vTaskDelay(5000 / portTICK_PERIOD_MS);
     }
 }
